@@ -16,6 +16,7 @@
 		<head>
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/admindashboard.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/css/ErrorMessage.css"/>
 		<link
 		      rel="stylesheet"
 		      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -23,6 +24,8 @@
 		<title>MediConnect - Admin</title>
 		</head>
 		<body>
+		<jsp:include page="header.jsp"/>
+		
 		
 		<c:choose>
 		    <c:when test="${empty currentUser}">
@@ -42,7 +45,6 @@
 		    </c:when>
 		    
 		     <c:otherwise>
-		        <jsp:include page="header.jsp"/>
 		
 		<section class="main-content">
 		      <jsp:include page="leftNavigation.jsp"/>
